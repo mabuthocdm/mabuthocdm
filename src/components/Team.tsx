@@ -4,47 +4,36 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Sarah Johnson",
+      name: "Cyril Msani",
       role: "Chief Executive Officer",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b332c1e2?w=300&h=300&fit=crop&crop=face",
-      bio: "Visionary leader with 15+ years in digital transformation and strategic planning.",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "sarah@organization.com"
-      }
-    },
-    {
-      name: "Michael Chen",
-      role: "Chief Technology Officer",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      bio: "Tech innovator passionate about building scalable solutions and emerging technologies.",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "michael@organization.com"
-      }
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of Design",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
-      bio: "Creative director focused on user experience and human-centered design principles.",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "emily@organization.com"
-      }
-    },
-    {
-      name: "David Thompson",
-      role: "Operations Director",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      bio: "Operations expert ensuring smooth project delivery and client satisfaction.",
+      bio: "Visionary leader driving the organization's strategic direction and growth.",
       social: {
         linkedin: "#",
         twitter: "#",
-        email: "david@organization.com"
+        email: "cyril@organization.com"
+      }
+    },
+    {
+      name: "Sibusiso Mlondi Shozi",
+      role: "IT Specialist",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      bio: "Technology expert ensuring robust IT infrastructure and innovative digital solutions.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        email: "sibusiso@organization.com"
+      }
+    },
+    {
+      name: "Khosi Majola",
+      role: "Humanitarian",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+      bio: "Passionate advocate for social impact and community development initiatives.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        email: "khosi@organization.com"
       }
     }
   ];
@@ -62,7 +51,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {teamMembers.map((member, index) => (
             <div 
               key={index}

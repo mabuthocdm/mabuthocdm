@@ -1,12 +1,12 @@
 
 import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Team = () => {
   const teamMembers = [
     {
       name: "Cyril Msani",
       role: "Chief Executive Officer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
       bio: "Visionary leader driving the organization's strategic direction and growth.",
       social: {
         linkedin: "#",
@@ -17,7 +17,6 @@ const Team = () => {
     {
       name: "Sibusiso Mlondi Shozi",
       role: "IT Specialist",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
       bio: "Technology expert ensuring robust IT infrastructure and innovative digital solutions.",
       social: {
         linkedin: "#",
@@ -28,7 +27,6 @@ const Team = () => {
     {
       name: "Khosi Majola",
       role: "Humanitarian",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
       bio: "Passionate advocate for social impact and community development initiatives.",
       social: {
         linkedin: "#",
@@ -37,6 +35,10 @@ const Team = () => {
       }
     }
   ];
+
+  const getInitials = (name: string) => {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase();
+  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -58,11 +60,11 @@ const Team = () => {
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
             >
               <div className="relative mb-6">
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto object-cover ring-4 ring-white shadow-lg group-hover:scale-105 transition-transform duration-300"
-                />
+                <Avatar className="w-32 h-32 mx-auto ring-4 ring-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <AvatarFallback className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                    {getInitials(member.name)}
+                  </AvatarFallback>
+                </Avatar>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
